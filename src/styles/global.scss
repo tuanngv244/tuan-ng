@@ -1,0 +1,71 @@
+@import "./common/_variables.scss";
+@import "./common/_mixins.scss";
+
+$white-color: #fff;
+$black-color: #000;
+
+$primary-font: "PP Neue Montreal", sans-serif;
+$apercu-font: "Apercu Mono Pro";
+
+$font-11: 11px;
+$font-12: 12px;
+$font-14: 14px;
+$font-18: 18px;
+$font-20: 20px;
+$font-22: 22px;
+$font-24: 24px;
+$font-36: 36px;
+$font-16: 16px;
+$font-24: 24px;
+$font-36: 36px;
+$font-48: 48px;
+$font-56: 56px;
+$font-72: 72px;
+
+$line-height-14: 14px;
+$line-height-24: 24px;
+$line-height-36: 36px;
+$line-height-16: 16px;
+$line-height-24: 24px;
+$line-height-36: 36px;
+$line-height-48: 48px;
+$line-height-56: 56px;
+$line-height-72: 72px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $white-color;
+  font-family: var(--font-default);
+  font-size: 65%;
+}
+
+.hover-line {
+  &:after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    right: 0;
+    left: auto;
+    bottom: 0;
+    display: block;
+    background-color: $black-color;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+      left: 0;
+      right: auto;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
