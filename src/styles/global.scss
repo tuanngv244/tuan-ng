@@ -69,3 +69,16 @@ body {
     }
   }
 }
+
+.load-page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 2000px;
+  height: 2000px;
+  z-index: 3000;
+  background-color: $black-color;
+  border-radius: 9999;
+  transition: all 0.25s;
+}

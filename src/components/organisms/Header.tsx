@@ -134,16 +134,18 @@ export default function Header() {
 
   return (
     <header className="header">
-      <div className="site-logo">
-        <div className="word">
-          <h1>TUAN</h1>
+      <Link href={"/"}>
+        <div className="site-logo">
+          <div className="word">
+            <h1>TUAN</h1>
+          </div>
+          <div className="word">
+            <h1>
+              NG.<sup>&copy;</sup>{" "}
+            </h1>
+          </div>
         </div>
-        <div className="word">
-          <h1>
-            NG.<sup>&copy;</sup>{" "}
-          </h1>
-        </div>
-      </div>
+      </Link>
       <div className="nav">
         <div className="nav-item">
           <Link href={PATHNAMES.About} className="hover-line">

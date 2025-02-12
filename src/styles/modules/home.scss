@@ -1,5 +1,8 @@
 @import "../global.scss";
 
+.home-page {
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -41,6 +44,7 @@ img {
   height: 100%;
   transform-origin: center center;
   will-change: transform;
+  z-index: 2;
 }
 
 .img {
@@ -53,6 +57,20 @@ img {
   visibility: visible;
   opacity: 0;
   will-change: transform;
+  img {
+    transition: all 0.45s;
+    cursor: pointer;
+  }
+  &.main {
+    overflow: hidden;
+
+    &:hover {
+      img {
+        transform: scale(1.25);
+        transition: all 0.45s;
+      }
+    }
+  }
 }
 
 .img:first-child {
@@ -71,6 +89,7 @@ img {
   gap: 1em;
   transform: none;
   will-change: transform;
+  z-index: 3000;
 }
 
 .img.stacked {
@@ -123,6 +142,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 1;
 
   .row {
     display: flex;

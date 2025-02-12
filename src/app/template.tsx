@@ -1,10 +1,10 @@
-import Header from "@/components/organisms/Header";
+import LoadPage from "@/components/molecules/LoadPage";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <Header />
+    <>
+      <LoadPage />
       {children}
-    </div>
+    </>
   );
 }

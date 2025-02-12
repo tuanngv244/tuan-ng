@@ -3,7 +3,7 @@ import "@/styles/modules/home.scss";
 
 export default function HomePage() {
   return (
-    <main className="container page">
+    <main className="home-page container page">
       <div className="revealers">
         <div className="revealer r-1"></div>
         <div className="revealer r-2"></div>

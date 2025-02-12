@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@/styles/global.scss";
 import { helveticaLight, helveticaRoman } from "@/fonts";
+import Header from "@/components/organisms/Header";
 
 export const metadata: Metadata = {
   title: "Tuan Ng",
@@ -18,7 +19,10 @@ export default function RootLayout({
       lang="en"
       className={`${helveticaRoman.variable} ${helveticaLight.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
