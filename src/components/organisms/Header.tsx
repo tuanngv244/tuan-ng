@@ -140,9 +140,7 @@ export default function Header() {
             <h1>TUAN</h1>
           </div>
           <div className="word">
-            <h1>
-              NG.<sup>&copy;</sup>{" "}
-            </h1>
+            <h1>NG.</h1>
           </div>
         </div>
       </Link>

@@ -145,7 +145,7 @@
   }
 }
 
-@mixin midimg($maxwidth: initial) {
+@mixin midImg($maxwidth: initial) {
   max-width: $maxwidth;
   min-width: 100%;
   min-height: 100%;
