@@ -8,7 +8,7 @@
   visibility: hidden;
   overflow: hidden;
   position: relative;
-  img {
+  .mesh {
     width: calc(100% - 500px);
     height: 100%;
     object-fit: cover;
@@ -27,23 +27,109 @@
     align-items: flex-start;
 
     .info {
-      padding: 150px 100px;
+      padding: 120px 100px 40px 100px;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       .title {
-        font-size: 36px;
+        font-size: clamp(60px, 100px, 120px);
         color: #000;
         font-weight: 600;
+        line-height: clamp(60px, 100px, 120px);
         overflow: hidden;
+        margin-bottom: 1rem;
         .char {
-          transform: translateY(36px);
+          transform: translateY(100%);
           opacity: 0;
         }
       }
       .intro {
+        // max-width: 800px;
         margin-top: 1rem;
-        font-family: $primary-font;
-        font-size: $font-16;
-        font-weight: 400;
+        font-family: var(--font-light);
+        font-size: clamp(16px, 18px, 24px);
+        font-weight: 500;
         color: $black-color;
+        text-transform: uppercase;
+
+        .line {
+          overflow: hidden;
+          .word {
+            transform: translateY(100%);
+            opacity: 0;
+          }
+        }
+      }
+      .call {
+        width: fit-content;
+        margin-top: 1rem;
+        font-family: var(--font-default);
+        font-size: $font-16;
+        font-weight: bold;
+        color: $black-color;
+        position: relative;
+        transform: translateY(100%);
+        opacity: 0;
+        display: inline-block;
+      }
+      .box-imgs {
+        border: 1px dashed gray;
+        border-radius: 1rem;
+        width: 100%;
+        height: 350px;
+        // overflow: hidden;
+        position: relative;
+        margin-top: 1rem;
+        transform: scaleY(0);
+        opacity: 0;
+
+        @keyframes fadeInOut {
+          0% {
+            opacity: 0.1;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0.1;
+          }
+        }
+
+        .view {
+          @include mid();
+          font-family: var(--font-light);
+          font-size: $font-16;
+          font-weight: bold;
+          color: $black-color;
+          text-transform: uppercase;
+          animation: fadeInOut forwards 3s infinite;
+        }
+      }
+      .contact-info {
+        align-self: flex-start;
+        .label {
+          font-family: var(--font-light);
+          font-size: $font-16;
+          font-weight: bold;
+          color: $black-color;
+          text-transform: uppercase;
+          opacity: 0;
+          transform: translateY(100%);
+        }
+        .email {
+          margin-top: 1rem;
+          font-family: var(--font-light);
+          font-size: $font-24;
+          font-weight: bold;
+          color: $black-color;
+          display: inline-block;
+          text-transform: uppercase;
+          position: relative;
+          opacity: 0;
+          transform: translateY(100%);
+        }
       }
     }
 
@@ -56,6 +142,54 @@
       justify-content: center;
 
       #person {
+        width: 350px;
+        height: 250px;
+      }
+    }
+  }
+
+  @include lg {
+  }
+  @include sm {
+    width: 100%;
+    overflow-y: auto;
+    .mesh {
+    }
+    .content {
+      flex-direction: column;
+      .box-person {
+        margin-top: 8rem;
+        height: 250px;
+        max-width: 100%;
+        #person {
+          width: 100%;
+          height: 250px;
+        }
+      }
+      .info {
+        height: fit-content;
+        padding: 16px 20px;
+        gap: 1rem 0;
+
+        .title {
+          font-size: 36px;
+          line-height: 36px;
+        }
+        .intro {
+          font-size: 16px;
+        }
+        .call {
+          font-size: 16px;
+          margin-top: 0;
+        }
+
+        .box-imgs {
+          margin-bottom: 1rem;
+          .view {
+            white-space: nowrap;
+            font-size: 14px;
+          }
+        }
       }
     }
   }

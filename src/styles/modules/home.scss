@@ -1,15 +1,12 @@
 @import "../global.scss";
 
-.home-page {
-}
-
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.container {
+.home-page {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -186,13 +183,27 @@ img {
     }
   }
 
+  .col-intro {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    font-size: $font-60;
+    font-family: var(--font-default);
+    font-weight: bold;
+    line-height: $line-height-72;
+    letter-spacing: 1.1;
+    color: $black-color;
+  }
   .intro {
-    font-size: $font-24;
+    font-size: $font-20;
     font-family: var(--font-light);
     font-weight: 500;
     line-height: 1.25;
     letter-spacing: 1.1;
     color: $black-color;
+
     @include lg {
       font-size: $font-20;
     }

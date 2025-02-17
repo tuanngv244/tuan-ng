@@ -1,3 +1,4 @@
+@import "../common/mixins";
 @import "../global.scss";
 
 .header {
@@ -44,6 +45,21 @@
         font-weight: 500;
         text-decoration: none;
         color: $black-color;
+      }
+    }
+  }
+  @include sm {
+    .site-logo {
+      h1 {
+        font-size: $font-20;
+      }
+    }
+    .nav {
+      gap: 0 1rem;
+      .nav-item {
+        a {
+          font-size: $font-14;
+        }
       }
     }
   }

@@ -19,6 +19,7 @@ $font-16: 16px;
 $font-24: 24px;
 $font-48: 48px;
 $font-56: 56px;
+$font-60: 60px;
 $font-72: 72px;
 
 $line-height-14: 14px;
@@ -80,4 +81,8 @@ body {
   background-color: $black-color;
   border-radius: 9999;
   transition: all 0.25s;
+}
+
+.over-hidden {
+  overflow: hidden;
 }

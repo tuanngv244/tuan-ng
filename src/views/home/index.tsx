@@ -3,7 +3,7 @@ import "@/styles/modules/home.scss";
 
 export default function HomePage() {
   return (
-    <main className="home-page container page">
+    <main className="home-page  page">
       <div className="revealers">
         <div className="revealer r-1"></div>
         <div className="revealer r-2"></div>
@@ -43,12 +43,13 @@ export default function HomePage() {
                 <p className="bold feature">Feature Works</p>
               </div>
             </div>
-            <div className="col">
+            <div className="col col-intro">
+              <h2 className=" name">CYAN NGUYEN</h2>
               <h2 className="intro">
-                Hi, I'm Cyan Nguyen👋 A Software Engineer from Vietnam. <br />I
-                always want to bring great experience to clients. <br />I always
-                try my best in every product with my co-workers. It's great to
-                connect with someone who shares similar interests!
+                I'm a <strong>Web Developer</strong> from Vietnam. <br />
+                I always want to bring great experience to clients. <br />I
+                always try my best in every product with my co-workers. It's
+                great to connect with someone who shares similar interests!
               </h2>
             </div>
           </div>
