@@ -128,7 +128,7 @@ export default function WorkPage() {
         ease: "hop",
       })
       .to(oldTitle, {
-        y: 1,
+        y: "100%",
         opacity: 0,
         duration: 0.5,
         ease: "power2.out",
@@ -142,9 +142,12 @@ export default function WorkPage() {
         options={{
           direction: "ttb",
           wheel: true,
+          drag: false,
+          releaseWheel: true,
+          wheelSleep: 500,
           perPage: 1,
+          perMove: 1,
           height: "50vh",
-          pauseOnHover: true,
           width: "100%",
           // type: "loop",
           pagination: false,
